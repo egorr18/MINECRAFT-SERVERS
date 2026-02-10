@@ -209,8 +209,8 @@
 
 .burger span{
   display:block;
-  height:2px;
-  margin:6px 12px;
+  height:3px;
+  margin:6px 4px;
   background: rgba(233,242,238,.85);
   border-radius: 999px;
 }
