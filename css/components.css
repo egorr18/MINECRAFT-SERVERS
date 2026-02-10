@@ -238,7 +238,6 @@
 }
 .is-disabled{ opacity:.55; pointer-events:none; }
 
-/* actions */
 .topbar__actions{
   display:flex;
   align-items:center;
@@ -246,14 +245,12 @@
   margin-left: auto;
 }
 
-/* mobile actions in nav */
 .nav__actions{
   display:none;
   gap: 10px;
   margin-top: 8px;
 }
 
-/* burger */
 .burger{
   display:none;
   width: 44px;
