@@ -72,17 +72,16 @@
   );
 }
 
-/* =========================
-   TOPBAR / NAV
-========================= */
+/* TOPBAR / NAV */
 .topbar{
   position: sticky;
   top: 0;
   z-index: 50;
-  background: rgba(10,14,12,.70);
-  backdrop-filter: blur(14px);
+  background: var(--bg);                 /* ✅ суцільний темний */
   border-bottom: 1px solid rgba(255,255,255,.06);
+  backdrop-filter: none;                /* ✅ без розмиття */
 }
+
 
 .topbar__inner{
   height: 64px;
@@ -203,6 +202,7 @@
   height: 44px;
   border-radius: 14px;
   border: 1px solid rgba(255,255,255,.08);
+  border-radius: 10px;
   background: rgba(255,255,255,.03);
   margin-left: auto;
 }
