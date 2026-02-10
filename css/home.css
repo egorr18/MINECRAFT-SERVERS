@@ -228,12 +228,42 @@
 .cta__inner p{ margin: 0 0 16px; }
 .cta__buttons{ display:flex; justify-content:center; gap: 12px; flex-wrap: wrap; }
 
-/* Footer */
 .footer{ padding: 26px 0 40px; border-top: 1px solid rgba(255,255,255,.06); }
 .footer__inner{ display:flex; justify-content:space-between; align-items:flex-start; gap: 20px; }
 .footer__links{ display:flex; gap: 14px; flex-wrap: wrap; }
 .footer__links a{ text-decoration:none; color: rgba(233,242,238,.75); font-weight: 700; }
 .footer__links a:hover{ color: #fff; }
+
+@media (max-width: 900px){
+  .hero__left{
+    text-align: center;
+    margin: 0 auto;
+  }
+
+  .badge{
+    margin: 0 auto;
+  }
+
+  .trust{
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .hero__cta{
+    justify-content: center;
+  }
+
+  .hero__desc{
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .hero__right{
+    margin: 0 auto;
+  }
+}
+
+
 @media (max-width: 980px){
   .footer__inner{ flex-direction: column; }
 }
