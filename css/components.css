@@ -1,7 +1,5 @@
 /* базові компоненти */
 .card{
-  background: linear-gradient(180deg, rgba(255,255,255,.03), rgba(255,255,255,.015));
-  border: 1px solid var(--stroke);
   border-radius: var(--radius);
   box-shadow: var(--shadow);
 }
@@ -15,10 +13,11 @@
   border-radius: 14px;
   border: 1px solid transparent;
   text-decoration:none;
-  font-weight: 800;
+  font-weight: 500;
   letter-spacing: .2px;
   transition: transform .12s ease, filter .12s ease, background .12s ease, border-color .12s ease;
   user-select:none;
+  
 }
 .btn:active{ transform: translateY(1px); }
 
@@ -48,6 +47,60 @@
   color: var(--text);
 }
 .btn--outline:hover{ border-color: rgba(86,220,49,.60); }
+
+.btn__icon{
+  width: 16px;
+  height: 16px;
+  flex: 0 0 16px;
+  object-fit: contain;
+  display: block;
+}
+
+.btn__icon--discord{
+  filter: brightness(0) saturate(100%)
+          invert(46%) sepia(64%) saturate(4000%)
+          hue-rotate(214deg) brightness(103%) contrast(101%);
+}
+
+.btn--discord{
+  background: transparent;
+  border: 1px solid rgba(88, 101, 242, .55);
+  color: rgba(233,242,238,.92);
+  box-shadow: 0 18px 45px rgba(88, 101, 242, .08);
+}
+
+.btn--discord:hover{
+  background: rgba(88, 101, 242, .10);
+  border-color: rgba(88, 101, 242, .80);
+}
+
+.btn--discord.btn--outline{
+  background: transparent !important;
+}
+
+.btn--discord.is-solid{
+  background: #5865F2;
+  border-color: rgba(255,255,255,.12);
+  color: #fff;
+  box-shadow: 0 22px 60px rgba(88, 101, 242, .22);
+}
+
+.btn--discord.is-solid:hover{
+  filter: brightness(1.03);
+}
+
+.btn.btn--discord{
+  color: #5865F2 !important;
+  background: transparent !important;
+  border-color: rgba(88, 101, 242, .55) !important;
+}
+
+.btn.btn--discord:hover{
+  color: #7B86FF !important;
+  background: rgba(88, 101, 242, .10) !important;
+  border-color: rgba(88, 101, 242, .85) !important;
+}
+
 
 .badge{
   display:inline-flex; align-items:center; gap:10px;
@@ -123,7 +176,7 @@
   display:flex;
   align-items:center;
   gap: 10px;
-  flex: 1;              /* ✅ щоб actions поїхали вправо */
+  flex: 1;
 }
 
 .nav__link{

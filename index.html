@@ -80,9 +80,11 @@
           <a class="btn btn--primary btn--lg" href="#">
             <span aria-hidden="true">🚀</span> Create Server
           </a>
-          <a class="btn btn--outline btn--lg" href="#" data-discord-link>
-            <span aria-hidden="true">💬</span> Join Discord
+          <a class="btn btn--discord btn--lg" href="#" data-discord-link>
+            <img class="btn__icon btn__icon--discord" src="./assets/icons/discord.png" alt="" aria-hidden="true">
+            Join Discord
           </a>
+
         </div>
       </div>
 
@@ -142,7 +144,6 @@
     </div>
   </section>
 
-  <!-- Stats -->
   <section class="stats">
     <div class="container stats__grid">
       <div class="stat">
@@ -164,7 +165,6 @@
     </div>
   </section>
 
-  <!-- Why Choose -->
   <section class="section" id="features">
     <div class="container">
       <div class="section__head">
@@ -200,7 +200,6 @@
     </div>
   </section>
 
-  <!-- Pricing -->
   <section class="section" id="pricing">
     <div class="container">
       <div class="section__head">
@@ -231,7 +230,6 @@
           </div>
 
           <div class="plan__price">
-            <div class="muted">Always</div>
             <div class="plan__value accent">Free</div>
           </div>
 
@@ -248,11 +246,10 @@
         <article class="plan card card--glow" data-plan data-base-price="6">
           <div class="plan__top">
             <div class="plan__name">Wolf</div>
-            <div class="plan__hint muted">For friends & small communities</div>
+            <div class="plan__hint muted">24/7 Always Online</div>
           </div>
 
           <div class="plan__price">
-            <div class="muted">From</div>
             <div class="plan__value">
               <span class="accent">$</span><span class="accent" data-price>—</span>
               <span class="muted" data-price-suffix>/mo</span>
@@ -272,11 +269,10 @@
         <article class="plan card" data-plan data-base-price="12">
           <div class="plan__top">
             <div class="plan__name">Dragon</div>
-            <div class="plan__hint muted">For modpacks & higher performance</div>
+            <div class="plan__hint muted">24/7 Always Online</div>
           </div>
 
           <div class="plan__price">
-            <div class="muted">From</div>
             <div class="plan__value">
               <span class="accent">$</span><span class="accent" data-price>—</span>
               <span class="muted" data-price-suffix>/mo</span>
@@ -314,7 +310,7 @@
           </p>
           <div class="review__meta">
             <div class="review__name" data-review-name>Parth Sharma</div>
-            <div class="review__country accent" data-review-country>India</div>
+            <div class="review__country review__country--accent" data-review-country>India</div>
           </div>
 
           <div class="dots" aria-label="Review dots" data-review-dots></div>
@@ -379,28 +375,68 @@
       </p>
       <div class="cta__buttons">
         <a class="btn btn--primary btn--lg" href="#">🚀 Create Server</a>
-        <a class="btn btn--outline btn--lg" href="#" data-discord-link>💬 Join Discord</a>
+          <a class="btn btn--discord btn--lg" href="#" data-discord-link>
+            <img class="btn__icon btn__icon--discord" src="./assets/icons/discord.png" alt="discord" aria-hidden="true">
+            <span>Join Discord</span>
+          </a>
       </div>
     </div>
   </section>
 </main>
 
 <footer class="footer">
-  <div class="container footer__inner">
-    <div>
-      <div class="brand brand--sm">
+  <div class="container footer__grid">
+    <div class="footer__brand">
+      <div class="footer__logoRow">
       <img class="brand__logo" src="assets/icons/logo.svg" alt="Logo" />
-        <span class="brand__text"></span>
+        <span class="footer__brandName">MCServerHost</span>
       </div>
-      <p class="muted">Minecraft server hosting made simple.</p>
+
+      <p class="footer__desc">
+        Premium Minecraft server hosting with exceptional performance, reliability, and 24/7 support.
+      </p>
+
+      <div class="footer__social">
+        <a class="footer__icon" href="#" aria-label="Twitter">
+          <img class="btn__icon" src="../assets/icons/tiktok.png" alt="tiktok" aria-hidden="true">
+        </a>
+        <a class="footer__icon" href="#" aria-label="Twitter">
+          <img class="btn__icon" src="../assets/icons/twitter.png" alt="twitter" aria-hidden="true">
+        </a>
+        <a class="footer__icon" href="#" aria-label="Discord">
+          <img class="btn__icon" src="../assets/icons/discord.png" alt="discord" aria-hidden="true">
+        </a>
+      </div>
     </div>
 
-    <div class="footer__links">
-      <a href="#features">Features</a>
-      <a href="#pricing">Plans</a>
-      <a href="#faq">FAQ</a>
-      <a href="#" data-discord-link>Discord</a>
+    <div class="footer__col">
+      <div class="footer__title">Services</div>
+      <a class="footer__link" href="#">Minecraft Hosting</a>
+      <a class="footer__link" href="#">Free Minecraft Hosting</a>
+      <a class="footer__link" href="#">Account Area</a>
+      <a class="footer__link" href="#">Server Dashboard</a>
     </div>
+
+    <div class="footer__col">
+      <div class="footer__title">Community</div>
+      <a class="footer__link" href="#">Community Forums</a>
+      <a class="footer__link" href="#">Minecraft Server List</a>
+      <a class="footer__link" href="#">Member List</a>
+    </div>
+
+    <div class="footer__col">
+      <div class="footer__title">Resources</div>
+      <a class="footer__link" href="#">Careers</a>
+      <a class="footer__link" href="#">Downloads</a>
+      <a class="footer__link" href="#">Service Status</a>
+      <a class="footer__link" href="#">Terms of Service</a>
+      <a class="footer__link" href="#">Privacy Policy</a>
+    </div>
+  </div>
+
+  <div class="container footer__bottom">
+    <div class="footer__line"></div>
+    <div class="footer__copy">© 2026 MCServerHost. All rights reserved.</div>
   </div>
 </footer>
 
