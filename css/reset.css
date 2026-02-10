@@ -1,3 +1,4 @@
+/* він “вирівнює” стандартні стилі браузера, щоб сайт виглядав однаково в Chrome/Edge/Firefox */
 *{box-sizing:border-box}
 html,body{height:100%}
 body{margin:0}
