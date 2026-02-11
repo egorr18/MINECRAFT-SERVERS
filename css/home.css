@@ -16,7 +16,6 @@
 
 .hero__title{
   margin: 24px 0 24px;
-  font-size: clamp(38px, 3vw, 72px);
   line-height: 1.05;
   letter-spacing: -0.03em;
   font-weight: 700;
@@ -152,6 +151,7 @@
 .feature h3{
   margin: 0 0 8px; 
 }
+
 .feature p{
   margin: 0; 
 }
