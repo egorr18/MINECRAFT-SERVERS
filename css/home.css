@@ -357,6 +357,15 @@
 
 .faq__support{ text-align:center; margin-top:18px; }
 
+/* desktop: ховаємо бургер */
+@media (min-width: 901px){
+  .burger{ display: none !important; }
+}
+
+/* mobile: показуємо бургер */
+@media (max-width: 900px){
+  .burger{ display: flex !important; }
+}
 
 /* CTA */
 .cta{ padding: 40px 0 70px; }

@@ -28,36 +28,35 @@
 
     <nav class="nav" data-nav aria-label="Main navigation">
       <a class="nav__link is-active" href="./">Home</a>
-        <a href="pages/create-server.html">Create a server</a>
+      <a class="nav__link" href="pages/create-server.html">Create a server</a>
 
-    <div class="nav__dropdown" data-dropdown>
-    <button class="nav__toggle" type="button" data-dropdown-btn aria-expanded="false">
-        Community <span class="nav__caret" aria-hidden="true">˄</span>
-    </button>
+      <div class="nav__dropdown" data-dropdown>
+        <button class="nav__toggle" type="button" data-dropdown-btn aria-expanded="false">
+          Community <span class="nav__caret" aria-hidden="true">˄</span>
+        </button>
 
         <div class="nav__menu" data-dropdown-menu>
-            <a class="nav__item" href="#forums">
+          <a class="nav__item" href="#forums">
             <img class="nav__icon" src="assets/icons/message-square.svg" alt="" aria-hidden="true">
             Forums
-            </a>
+          </a>
 
-            <a class="nav__item" href="#members">
+          <a class="nav__item" href="#members">
             <img class="nav__icon" src="assets/icons/users.svg" alt="" aria-hidden="true">
             Members
-            </a>
+          </a>
 
-            <a class="nav__item" href="#server-list">
+          <a class="nav__item" href="#server-list">
             <img class="nav__icon" src="assets/icons/list.svg" alt="" aria-hidden="true">
             Server List
-            </a>
+          </a>
 
-            <a class="nav__item" href="#search">
+          <a class="nav__item" href="#search">
             <img class="nav__icon" src="assets/icons/search.svg" alt="" aria-hidden="true">
             Search
-            </a>
+          </a>
         </div>
-    </div>
-
+      </div>
 
       <div class="nav__actions">
         <a class="btn btn--ghost w100" href="#login">Login</a>
@@ -75,6 +74,50 @@
     </button>
   </div>
 </header>
+
+<!-- MOBILE MENU (overlay) -->
+<div class="mnav" data-mobile-menu aria-hidden="true">
+  <div class="mnav__panel" role="dialog" aria-modal="true" aria-label="Menu">
+    <div class="mnav__top">
+      <a class="brand" href="./" aria-label="Home">
+        <img class="brand__logo" src="assets/icons/logo.svg" alt="Logo" />
+      </a>
+      <button class="mnav__close" type="button" aria-label="Close menu" data-mobile-close>✕</button>
+    </div>
+
+    <nav class="mnav__links" aria-label="Mobile navigation">
+      <a class="mnav__link is-active" href="./">Home</a>
+      <a class="mnav__link" href="pages/create-server.html">Create a server</a>
+
+      <div class="mnav__sectionTitle">COMMUNITY</div>
+
+      <a class="mnav__link mnav__link--icon" href="#forums">
+        <img class="mnav__icon" src="assets/icons/message-square.svg" alt="" aria-hidden="true">
+        Forums
+      </a>
+
+      <a class="mnav__link mnav__link--icon" href="#members">
+        <img class="mnav__icon" src="assets/icons/users.svg" alt="" aria-hidden="true">
+        Members
+      </a>
+
+      <a class="mnav__link mnav__link--icon" href="#server-list">
+        <img class="mnav__icon" src="assets/icons/list.svg" alt="" aria-hidden="true">
+        Server List
+      </a>
+
+      <a class="mnav__link mnav__link--icon" href="#search">
+        <img class="mnav__icon" src="assets/icons/search.svg" alt="" aria-hidden="true">
+        Search
+      </a>
+    </nav>
+
+    <div class="mnav__bottom">
+      <a class="mnav__btn mnav__btn--ghost" href="#login">Login</a>
+      <a class="mnav__btn mnav__btn--primary" href="#signup">Sign Up</a>
+    </div>
+  </div>
+</div>
 
 <main>
   <section class="hero">

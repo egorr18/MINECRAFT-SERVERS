@@ -1,31 +1,51 @@
 (function () {
   const burger = document.querySelector("[data-burger]");
-  const nav = document.querySelector("[data-nav]");
 
-  // ТВОЇ атрибути для dropdown (НЕ міняємо HTML)
   const dropdownBtn = document.querySelector("[data-dropdown-btn]");
   const dropdownMenu = document.querySelector("[data-dropdown-menu]");
 
   const clock = document.querySelector("[data-clock]");
 
-  // Mobile menu (burger)
-  if (burger && nav) {
+  const mobileMenu = document.querySelector("[data-mobile-menu]");
+  const mobileClose = document.querySelector("[data-mobile-close]");
+
+  if (burger && mobileMenu) {
+    const openMenu = () => {
+      mobileMenu.classList.add("is-open");
+      mobileMenu.setAttribute("aria-hidden", "false");
+      burger.setAttribute("aria-expanded", "true");
+      document.body.classList.add("no-scroll");
+    };
+
+    const closeMenu = () => {
+      mobileMenu.classList.remove("is-open");
+      mobileMenu.setAttribute("aria-hidden", "true");
+      burger.setAttribute("aria-expanded", "false");
+      document.body.classList.remove("no-scroll");
+    };
+
     burger.addEventListener("click", () => {
-      const isOpen = nav.classList.toggle("is-open");
-      burger.setAttribute("aria-expanded", String(isOpen));
+      const isOpen = mobileMenu.classList.contains("is-open");
+      isOpen ? closeMenu() : openMenu();
     });
 
-    // Close menu on link click (mobile)
-    nav.addEventListener("click", (e) => {
+    if (mobileClose) mobileClose.addEventListener("click", closeMenu);
+
+    mobileMenu.addEventListener("click", (e) => {
+      if (e.target === mobileMenu) closeMenu();
+    });
+
+    mobileMenu.addEventListener("click", (e) => {
       const a = e.target.closest("a");
       if (!a) return;
+      closeMenu();
+    });
 
-      nav.classList.remove("is-open");
-      burger.setAttribute("aria-expanded", "false");
+    document.addEventListener("keydown", (e) => {
+      if (e.key === "Escape") closeMenu();
     });
   }
 
-  // Dropdown
   function closeDropdown() {
     if (!dropdownBtn || !dropdownMenu) return;
     dropdownMenu.style.display = "none";
@@ -35,22 +55,18 @@
   if (dropdownBtn && dropdownMenu) {
     dropdownBtn.addEventListener("click", (e) => {
       e.stopPropagation();
-
       const opened = dropdownMenu.style.display === "block";
       dropdownMenu.style.display = opened ? "none" : "block";
       dropdownBtn.setAttribute("aria-expanded", opened ? "false" : "true");
     });
 
-    // close on outside click
     document.addEventListener("click", closeDropdown);
 
-    // close on ESC
     document.addEventListener("keydown", (e) => {
       if (e.key === "Escape") closeDropdown();
     });
   }
 
-  // Fake clock like screenshot
   if (clock) {
     setInterval(() => {
       const d = new Date();
@@ -61,7 +77,6 @@
     }, 1000);
   }
 
-  // Discord placeholders
   document.querySelectorAll("[data-discord-link]").forEach((el) => {
     el.addEventListener("click", (e) => {
       e.preventDefault();
