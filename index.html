@@ -29,17 +29,35 @@
     <nav class="nav" data-nav aria-label="Main navigation">
       <a class="nav__link is-active" href="./">Home</a>
         <a href="pages/create-server.html">Create a server</a>
-      <div class="nav__dropdown" data-dropdown>
-        <button class="nav__link nav__dropbtn" type="button" data-dropdown-btn aria-expanded="false">
-          Community <span class="nav__chev" aria-hidden="true">▾</span>
-        </button>
+
+    <div class="nav__dropdown" data-dropdown>
+    <button class="nav__toggle" type="button" data-dropdown-btn aria-expanded="false">
+        Community <span class="nav__caret" aria-hidden="true">˄</span>
+    </button>
 
         <div class="nav__menu" data-dropdown-menu>
-          <a href="#reviews">Reviews</a>
-          <a href="#faq">FAQ</a>
-          <a href="#" class="is-disabled" aria-disabled="true">Discord (soon)</a>
+            <a class="nav__item" href="#forums">
+            <img class="nav__icon" src="assets/icons/message-square.svg" alt="" aria-hidden="true">
+            Forums
+            </a>
+
+            <a class="nav__item" href="#members">
+            <img class="nav__icon" src="assets/icons/users.svg" alt="" aria-hidden="true">
+            Members
+            </a>
+
+            <a class="nav__item" href="#server-list">
+            <img class="nav__icon" src="assets/icons/list.svg" alt="" aria-hidden="true">
+            Server List
+            </a>
+
+            <a class="nav__item" href="#search">
+            <img class="nav__icon" src="assets/icons/search.svg" alt="" aria-hidden="true">
+            Search
+            </a>
         </div>
-      </div>
+    </div>
+
 
       <div class="nav__actions">
         <a class="btn btn--ghost w100" href="#login">Login</a>
