@@ -461,11 +461,6 @@ details[open] .faq__a.muted {
   font-weight: 400;
 }
 
-.mnav__link.is-active{
-  background: rgba(86,220,49,.18);
-  color: var(--accent2);
-}
-
 .mnav__sectionTitle{
   margin: 14px 10px 6px;
   font-size: 14px;
@@ -486,6 +481,7 @@ details[open] .faq__a.muted {
   width: 18px;
   height: 18px;
   opacity: .85;
+  filter: brightness(0) invert(1);
 }
 
 .mnav__bottom{
