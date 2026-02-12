@@ -20,7 +20,7 @@
 
 <body>
 <header class="topbar" data-topbar>
-  <div class="container topbar__inner">
+  <nav class="container topbar__inner">
 
     <a class="brand" href="./" aria-label="Home">
       <img class="brand__logo" src="assets/icons/logo.svg" alt="Logo" />
@@ -61,21 +61,20 @@
         </div>
       </div>
 
-      <div class="nav__actions">
-        <a class="btn btn--ghost w100" href="./pages/login.html">Login</a>
-        <a class="btn btn--primary w100" href="#signup">Sign Up</a>
-      </div>
-    </nav>
+
 
     <div class="topbar__actions">
-      <a class="btn btn--ghost" href="./pages/login.html">Login</a>
-      <a class="btn btn--primary" href="./pages/signup.html">Sign Up</a>
+      <a class="btn btn--ghost" href="../pages/login.html">Login</a>
+      <a class="btn btn--primary topbar__signup" href="../pages/signup.html">Sign Up</a>
     </div>
 
+  </nav>
+  
     <button class="burger" type="button" aria-label="Open menu" aria-expanded="false" data-burger>
       <span></span><span></span><span></span>
     </button>
   </div>
+
 </header>
 
 <div class="mnav" data-mobile-menu aria-hidden="true">

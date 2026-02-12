@@ -113,6 +113,14 @@
   border-color: rgba(88, 101, 242, .85) !important;
 }
 
+.topbar__signup{
+  min-width: 90px;
+  height: 44px;
+  border-radius: 14px;
+  background: linear-gradient(180deg, var(--accent), var(--accent2));
+}
+
+
 
 .badge{
   display:inline-flex; align-items:center; gap:10px;
