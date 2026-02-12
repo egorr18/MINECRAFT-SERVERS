@@ -145,7 +145,7 @@
   border-radius:12px;
   background: var(--accent2);
   border: 1px solid var(--accent);
-  box-shadow: 0 14px 40px rgba(86,220,49,.10);
+  box-shadow: 0 14px 40px rgba(162,187,29,.60);
 }
 
 .feature h3{
@@ -336,7 +336,7 @@
   transition: transform .2s ease, opacity .2s ease;
 }
 
-.faq__item[open] .faq__caret img{
+details[open] .faq__caret img{
   transform: rotate(180deg);
   opacity: 1;
 }
