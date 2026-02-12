@@ -477,10 +477,12 @@ details[open] .faq__a.muted {
   display:flex;
   align-items:center;
   gap: 12px;
-  font-weight: 200; /* як ти хотів */
+  font-weight: 200;
 }
 
 .mnav__icon{
+  display: block;
+  flex: 0 0 18px;
   width: 18px;
   height: 18px;
   opacity: .85;

@@ -15,11 +15,14 @@
         };
 
         const closeMenu = () => {
-            mobileMenu.classList.remove("is-open");
-            mobileMenu.setAttribute("aria-hidden", "true");
-            burger.setAttribute("aria-expanded", "false");
-            document.body.classList.remove("no-scroll");
+        burger.focus();
+
+        mobileMenu.classList.remove("is-open");
+        mobileMenu.setAttribute("aria-hidden", "true");
+        burger.setAttribute("aria-expanded", "false");
+        document.body.classList.remove("no-scroll");
         };
+
 
         burger.addEventListener("click", () => {
             const isOpen = mobileMenu.classList.contains("is-open");
