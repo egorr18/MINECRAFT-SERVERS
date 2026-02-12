@@ -35,8 +35,8 @@
   color: var(--text);
 }
 
-.btn--ghost:hover{ 
-  background: rgba(255,255,255,.05); 
+.btn--ghost:hover{
+  background: rgba(255,255,255,.05);
 }
 
 .btn--outline{
@@ -225,7 +225,7 @@
   min-width: 220px;
   padding: 10px;
   border-radius: 16px;
-  background: rgb(16 16 16 / 96%);  
+  background: rgb(16 16 16 / 96%);
   border: 1px solid rgba(255,255,255,.08);
   box-shadow: var(--shadow);
   display: none;
@@ -265,7 +265,8 @@
 .nav__icon{
   width: 18px;
   height: 18px;
-  opacity: .8;
+  filter: invert(1);
+  opacity: 0.92;
 }
 
 .nav__toggle{
@@ -281,6 +282,55 @@
 
   padding: 10px 0;
   border-radius: 0;
+}
+/* Базовое состояние иконки в навигации */
+.nav__toggle img {
+    width: 16px;
+    height: 16px;
+    filter: invert(1); /* Если иконка темная */
+    transition: transform 0.3s ease-in-out; /* Плавность движения */
+    transform: rotate(0deg); /* Начальное положение (вниз) */
+    display: block;
+}
+
+/* Поворот при активном меню */
+.nav__toggle.active img {
+    transform: rotate(180deg); /* Переворот вверх */
+}
+/* Базовое состояние иконки в FAQ */
+.faq__icon {
+    width: 16px;
+    height: 16px;
+    transition: transform 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    transform: rotate(180deg); /* Закрыто - смотрит вниз */
+    opacity: 0.7;
+}
+
+/* Поворот при открытии карточки */
+details[open] .faq__icon {
+    transform: rotate(0deg); /* Открыто - смотрит вверх */
+    opacity: 1;
+}
+
+/* Убираем стандартный треугольник браузера */
+.faq__item summary::-webkit-details-marker,
+.faq__item summary::marker {
+    display: none !important;
+    content: "" !important;
+}
+details[open] .faq__a.muted {
+    animation: faq-appear 0.3s ease-out;
+}
+
+@keyframes faq-appear {
+    from {
+        opacity: 0;
+        transform: translateY(-8px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
 }
 
 .nav__toggle:hover{
@@ -467,10 +517,10 @@
 
 @media (max-width: 900px){
   .burger{
-    display:block; 
+    display:block;
   }
   .topbar__actions{
-    display:none; 
+    display:none;
   }
 
   .nav{
@@ -478,7 +528,7 @@
     inset: 76px 16px auto 16px;
     padding: 14px;
     border-radius: 18px;
-    background: rgb(16 16 16 / 96%);  
+    background: rgb(16 16 16 / 96%);
     border: 1px solid rgba(255,255,255,.08);
     box-shadow: var(--shadow);
     display:none;
@@ -538,4 +588,144 @@
     font-weight: 200;
   }
 
+}
+.review.card {
+    display: flex !important;
+    flex-direction: row !important;
+    flex-wrap: nowrap !important;
+}
+
+.review.card {
+    display: flex !important;
+    flex-direction: row !important;
+    align-items: center !important;
+    justify-content: space-between !important;
+    gap: 20px !important;
+}
+
+
+.review__body {
+    flex: 1 !important;
+}
+
+
+.review__nav {
+    flex-shrink: 0 !important;
+    width: 44px !important;
+    height: 44px !important;
+    display: flex !important;
+    align-items: center;
+    justify-content: center;
+}
+
+
+.review__nav .nav__icon {
+    width: 18px !important;
+    filter: invert(1) !important;
+}
+
+[data-review-prev] .nav__icon { transform: rotate(-90deg) !important; }
+[data-review-next] .nav__icon { transform: rotate(90deg) !important; }
+
+.dots {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 12px;
+    margin-top: 30px;
+}
+
+/* Обычная точка */
+.dot {
+    width: 8px;
+    height: 8px;
+    background: rgba(255, 255, 255, 0.15);
+    border-radius: 50%;
+    cursor: pointer;
+    transition: background 0.3s ease;
+}
+
+/* Активная точка (зеленая) */
+.dot.is-active {
+    background: #56dc31; /* Твой зеленый */
+    box-shadow: 0 0 8px rgba(86, 220, 49, 0.4); /* Легкое свечение */
+}
+/* Убираем стандартную стрелочку details */
+details summary::-webkit-details-marker {
+    display: none;
+}
+details summary {
+    list-style: none;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    cursor: pointer;
+    outline: none;
+    user-select: none;
+}
+
+/* Стили карточки FAQ (настройка отступов) */
+.faq__item {
+    margin-bottom: 12px;
+    overflow: hidden;
+    transition: all 0.3s ease;
+}
+
+.faq__icon {
+    width: 16px;
+    height: 16px;
+    /* Это заставляет стрелку крутиться плавно, а не мгновенно */
+    transition: transform 0.3s ease;
+    /* Изначально разворачиваем вниз, если иконка смотрит вверх */
+    transform: rotate(180deg);
+}
+
+/* Когда карточка открыта, возвращаем в 0 градусов */
+details[open] .faq__icon {
+    transform: rotate(0deg);
+}
+
+@keyframes faq-slide {
+    from {
+        opacity: 0;
+        transform: translateY(-10px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Дополнительные стили для muted текста */
+.faq__a.muted {
+    margin-top: 10px;
+    line-height: 1.5;
+}
+/* Базовые стили для FAQ */
+.faq {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.faq__item.card {
+    padding: 15px;
+    border-radius: 8px; /* Или твои настройки скругления */
+}
+
+.faq__a {
+    cursor: pointer;
+    font-weight: 500;
+}
+
+.faq__a.muted {
+    margin-top: 10px;
+    font-weight: 400;
+    opacity: 0.7;
+}
+
+/* Возвращаем стандартный маркер (треугольник), если он был скрыт ранее */
+details summary {
+    display: list-item; /* Стандартное поведение */
+    padding-left: 5px;
 }

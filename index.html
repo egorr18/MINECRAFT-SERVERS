@@ -31,13 +31,16 @@
       <a class="nav__link" href="pages/create-server.html">Create a server</a>
 
       <div class="nav__dropdown" data-dropdown>
-        <button class="nav__toggle" type="button" data-dropdown-btn aria-expanded="false">
-          Community <span class="nav__caret" aria-hidden="true">˄</span>
-        </button>
+          <button class="nav__toggle" type="button" data-dropdown-btn aria-expanded="false">
+              Community
+              <span class="nav__caret" aria-hidden="true">
+        <img src="./assets/icons/chevron-up.svg" alt="arrow">
+              </span>
+          </button>
 
         <div class="nav__menu" data-dropdown-menu>
           <a class="nav__item" href="#forums">
-            <img class="nav__icon" src="assets/icons/message-square.svg" alt="" aria-hidden="true">
+            <img class="nav__icon" src="assets/icons/message-square-more.svg" alt="" aria-hidden="true">
             Forums
           </a>
 
@@ -59,14 +62,14 @@
       </div>
 
       <div class="nav__actions">
-        <a class="btn btn--ghost w100" href="#login">Login</a>
+        <a class="btn btn--ghost w100" href="./pages/login.html">Login</a>
         <a class="btn btn--primary w100" href="#signup">Sign Up</a>
       </div>
     </nav>
 
     <div class="topbar__actions">
-      <a class="btn btn--ghost" href="#login">Login</a>
-      <a class="btn btn--primary" href="#signup">Sign Up</a>
+      <a class="btn btn--ghost" href="./pages/login.html">Login</a>
+      <a class="btn btn--primary" href="./pages/signup.html">Sign Up</a>
     </div>
 
     <button class="burger" type="button" aria-label="Open menu" aria-expanded="false" data-burger>
@@ -112,8 +115,8 @@
     </nav>
 
     <div class="mnav__bottom">
-      <a class="mnav__btn mnav__btn--ghost" href="#login">Login</a>
-      <a class="mnav__btn mnav__btn--primary" href="#signup">Sign Up</a>
+      <a class="mnav__btn mnav__btn--ghost" href="./pages/login.html">Login</a>
+      <a class="mnav__btn mnav__btn--primary" href="./pages/signup.html">Sign Up</a>
     </div>
   </div>
 </div>
@@ -138,7 +141,7 @@
 
         <div class="hero__cta" id="create">
           <a class="btn btn--create btn--lg" href="#">
-            <img class="btn__icon btn__icon--rocket" src="assets/icons/rocket.png" alt="Create Server" aria-hidden="true">
+            <img class="btn__icon btn__icon--rocket" src="assets/icons/rocket.svg" alt="Create Server" aria-hidden="true">
             Create Server
           </a>
           <a class="btn btn--discord btn--lg" href="#" data-discord-link>
@@ -361,7 +364,8 @@
       </div>
 
       <div class="review card">
-        <button class="review__nav review__nav--l" type="button" aria-label="Previous review" data-review-prev>‹</button>
+        <button class="review__nav review__nav--l" type="button" aria-label="Previous review" data-review-prev>
+            <img class="nav__icon" src="./assets/icons/chevron-up.svg"></button>
 
         <div class="review__body">
           <div class="review__stars" aria-hidden="true">★★★★★</div>
@@ -373,10 +377,17 @@
             <div class="review__country review__country--accent" data-review-country>India</div>
           </div>
 
-          <div class="dots" aria-label="Review dots" data-review-dots></div>
+            <div class="dots" aria-label="Review dots" data-review-dots>
+                <span class="dots__active"></span>
+                <span class="dot"></span>
+                <span class="dot"></span>
+                <span class="dot"></span>
+                <span class="dot"></span>
+            </div>
         </div>
 
-        <button class="review__nav review__nav--r" type="button" aria-label="Next review" data-review-next>›</button>
+        <button class="review__nav review__nav--r" type="button" aria-label="Next review" data-review-next>
+            <img class="nav__icon" src="./assets/icons/chevron-up.svg"></button>
       </div>
     </div>
   </section>
@@ -388,32 +399,32 @@
         <p class="muted">Can’t find what you’re looking for? Contact support below.</p>
       </div>
 
-      <div class="faq">
-        <details class="faq__item card">
-          <summary class="faq__a">How quickly can I get my server running?</summary>
-          <p class="faq__a muted">Usually under 60 seconds after setup. (We’ll tune the real number later.)</p>
-        </details>
+        <div class="faq">
+            <details class="faq__item card">
+                <summary class="faq__a">How quickly can I get my server running?</summary>
+                <p class="faq__a muted">Usually under 60 seconds after setup. (We’ll tune the real number later.)</p>
+            </details>
 
-        <details class="faq__item card">
-          <summary class="faq__a">Can I upgrade or downgrade my plan later?</summary>
-          <p class="faq__a muted">Yes — upgrade anytime. Downgrade when you don’t need extra resources.</p>
-        </details>
+            <details class="faq__item card">
+                <summary class="faq__a">Can I upgrade or downgrade my plan later?</summary>
+                <p class="faq__a muted">Yes — upgrade anytime. Downgrade when you don’t need extra resources.</p>
+            </details>
 
-        <details class="faq__item card">
-          <summary class="faq__a">Is DDoS protection included?</summary>
-          <p class="faq__a muted">Yes, protection is included for all plans.</p>
-        </details>
+            <details class="faq__item card">
+                <summary class="faq__a">Is DDoS protection included?</summary>
+                <p class="faq__a muted">Yes, protection is included for all plans.</p>
+            </details>
 
-        <details class="faq__item card">
-          <summary class="faq__a">Can I install mods and plugins?</summary>
-          <p class="faq__a muted">Yes — we support popular server types. (We’ll list exact ones when you decide.)</p>
-        </details>
+            <details class="faq__item card">
+                <summary class="faq__a">Can I install mods and plugins?</summary>
+                <p class="faq__a muted">Yes — we support popular server types.</p>
+            </details>
 
-        <details class="faq__item card">
-          <summary class="faq__a">What payment methods do you accept?</summary>
-          <p class="faq__a muted">We’ll add Stripe/PayPal info later. For now this is placeholder copy.</p>
-        </details>
-      </div>
+            <details class="faq__item card">
+                <summary class="faq__a">What payment methods do you accept?</summary>
+                <p class="faq__a muted">We’ll add Stripe/PayPal info later. For now this is placeholder copy.</p>
+            </details>
+        </div>
 
       <div class="faq__support">
         <div class="muted">Still have questions?</div>
@@ -430,7 +441,7 @@
       </p>
       <div class="cta__buttons">
           <a class="btn btn--create btn--lg" href="#">
-            <img class="btn__icon btn__icon--rocket" src="assets/icons/rocket.png" alt="Create Server" aria-hidden="true">
+            <img class="btn__icon btn__icon--rocket" src="./assets/icons/rocket.svg" alt="Create Server" aria-hidden="true">
             Create Server
           </a>
           <a class="btn btn--discord btn--lg" href="#" data-discord-link>
@@ -476,7 +487,7 @@
     </div>
 
     <div class="footer__col">
-      <div class="footer__title">Community</div>
+      <div class="footer__title">header</div>
       <a class="footer__link" href="#">Community Forums</a>
       <a class="footer__link" href="#">Minecraft Server List</a>
       <a class="footer__link" href="#">Member List</a>
