@@ -73,10 +73,6 @@ section p a {
     font-weight: 500;
 }
 
-section p a:hover {
-    text-decoration: underline;
-}
-
 /* --- ФОРМА --- */
 .login-form {
     display: flex;
@@ -162,7 +158,6 @@ section p a:hover {
 
 .forgot-link:hover {
     opacity: 0.8;
-    text-decoration: underline;
 }
 
 /* --- КНОПКА --- */

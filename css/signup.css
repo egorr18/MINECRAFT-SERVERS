@@ -60,7 +60,6 @@ body {
 
 .link-accent:hover {
     opacity: 0.8;
-    text-decoration: underline;
 }
 
 /* --- Карточка --- */
@@ -155,7 +154,6 @@ body {
     user-select: none;
 }
 
-/* --- Кнопка --- */
 .btn-primary {
     background-color: var(--accent);
     color: #000;
