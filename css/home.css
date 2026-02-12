@@ -316,37 +316,33 @@
   align-items: center;
   justify-content: space-between;
   gap: 14px;
-
   font-size: 18px;
   color: rgba(255,255,255,.92);
-
   transition: background .15s ease;
+}
+
+.faq__caret{
+  flex: 0 0 auto;
+  display: inline-flex;
+  align-items: center;
+}
+
+.faq__caret img{
+  width: 18px;
+  height: 18px;
+  display: block;
+  opacity: .85;
+  filter: brightness(0) invert(1);
+  transition: transform .2s ease, opacity .2s ease;
+}
+
+.faq__item[open] .faq__caret img{
+  transform: rotate(180deg);
+  opacity: 1;
 }
 
 .faq__item > summary::-webkit-details-marker{ display:none; }
 .faq__item > summary::marker{ content:""; }
-
-
-.faq__item > summary::after{
-  content: "˅";
-  width: 38px;
-  height: 38px;
-  flex: 0 0 38px;
-  display: grid;
-  place-items: center;
-  border-radius: 12px;
-  background: rgba(255,255,255,.06);
-  color: rgba(255,255,255,.92);
-  font-weight: 800;
-  line-height: 1;
-  transform: rotate(0deg);
-  transition: transform .18s ease, background .18s ease;
-}
-
-.faq__item[open] > summary::after{
-  transform: rotate(180deg);
-  background: rgba(216,204,64,.16);
-}
 
 .faq__item > p{
   margin: 0;

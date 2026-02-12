@@ -706,12 +706,11 @@ details[open] .faq__icon {
     }
 }
 
-/* Дополнительные стили для muted текста */
 .faq__a.muted {
     margin-top: 10px;
     line-height: 1.5;
 }
-/* Базовые стили для FAQ */
+
 .faq {
     display: flex;
     flex-direction: column;
@@ -720,7 +719,7 @@ details[open] .faq__icon {
 
 .faq__item.card {
     padding: 15px;
-    border-radius: 8px; /* Или твои настройки скругления */
+    border-radius: px;
 }
 
 .faq__a {
@@ -734,8 +733,7 @@ details[open] .faq__icon {
     opacity: 0.7;
 }
 
-/* Возвращаем стандартный маркер (треугольник), если он был скрыт ранее */
 details summary {
-    display: list-item; /* Стандартное поведение */
+    display: list-item;
     padding-left: 5px;
 }

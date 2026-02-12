@@ -18,7 +18,6 @@ a:active,
 a:focus,
 a:focus-visible {
   text-decoration: none !important;
-  color: inherit;
 }
 
 .container{
