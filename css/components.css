@@ -684,9 +684,7 @@ details summary {
 .faq__icon {
     width: 16px;
     height: 16px;
-    /* Это заставляет стрелку крутиться плавно, а не мгновенно */
     transition: transform 0.3s ease;
-    /* Изначально разворачиваем вниз, если иконка смотрит вверх */
     transform: rotate(180deg);
 }
 
