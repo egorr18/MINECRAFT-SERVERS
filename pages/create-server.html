@@ -140,20 +140,33 @@
         protected by enterprise-grade DDoS security.
       </p>
 
-        <div class="billing" role="tablist" aria-label="Billing cycle">
+        <section
+            class="pricing"
+            data-pricing
+            data-pricing-target=".cs-plans"
+            data-base-period="monthly"
+            data-weekly-surcharge="0.25"
+            data-quarterly-discount="0.125"
+            data-yearly-discount="0.25"
+            data-default-billing="yearly"
+        >
+          <div class="billing" role="tablist" aria-label="Billing cycle">
             <button class="pill" type="button" data-billing="weekly" role="tab" aria-selected="false">
-            Weekly <span class="muted"></span>
+              Weekly <span class="muted"></span>
             </button>
+
             <button class="pill" type="button" data-billing="monthly" role="tab" aria-selected="false">
-            Monthly <span class="muted">-15%</span>
+              Monthly <span class="muted">-15%</span>
             </button>
+
             <button class="pill" type="button" data-billing="quarterly" role="tab" aria-selected="false">
-            Quarterly <span class="muted">-25%</span>
+              Quarterly <span class="muted">-25%</span>
             </button>
-            <button class="pill is-active" type="button" data-billing="yearly" role="tab" aria-selected="true">
-            Yearly <span class="muted">-35%</span>
+
+            <button class="pill" type="button" data-billing="yearly" role="tab" aria-selected="false">
+              Yearly <span class="muted">-35%</span>
             </button>
-        </div>
+          </div>
     </div>
   </section>
 
