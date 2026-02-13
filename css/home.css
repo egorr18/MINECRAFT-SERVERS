@@ -144,7 +144,7 @@
   padding:10px;
   border-radius:12px;
   background: var(--accent2);
-  border: 1px solid var(--accent);
+  border: 1px solid var(--accent2);
   box-shadow: 0 14px 40px rgba(34,204,23,.60);
 }
 
