@@ -105,7 +105,7 @@
 
 .members-filter{
   width:100%;
-  border:0;
+  border: 0;
   cursor:pointer;
   display:flex;
   align-items:center;
@@ -119,12 +119,13 @@
 }
 
 .members-filter:hover{
-  background: rgba(255,255,255,.04);
+  background: rgba(86,220,49,.12);
+  color: rgba(255,255,255,.92);
 }
 
-.members-filter.is-active{
+.members-filter:focus-visible{
+  outline: none;
   background: rgba(86,220,49,.12);
-  border: 1px solid rgba(86,220,49,.25);
   color: rgba(255,255,255,.92);
 }
 
