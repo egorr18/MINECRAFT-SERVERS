@@ -135,10 +135,14 @@
 .stat__label{ font-size: 12px; letter-spacing: .12em; margin-top: 4px; }
 
 /* Feature cards */
-.feature{ padding: 22px; box-shadow: none; background: rgba(156, 16, 16, 0.03); }
+.feature{ 
+  padding: 22px; 
+  box-shadow: none; 
+  background: rgb(19, 20, 19); }
 
 .feature__icon{
   display:block;
+
   width:44px;
   height:44px;
   padding:10px;
@@ -161,11 +165,12 @@
   display:flex; justify-content:center; gap: 10px;
   padding: 10px;
   border-radius: 18px;
-  background: rgba(255,255,255,.03);
+  background: rgba(255,255,255,0.03);
   border: 1px solid var(--stroke);
   width: min(720px, 100%);
   margin: 0 auto 18px;
 }
+
 .pill{
   flex:1;
   padding: 12px 12px;
@@ -175,6 +180,7 @@
   color: rgba(233,242,238,.82);
   font-weight: 600;
 }
+
 .pill.is-active{
   background: rgba(25,211,107,.18);
   border-color: rgba(25,211,107,.28);
@@ -304,7 +310,7 @@
 .faq__item{
   border: 1px solid rgba(255,255,255,.08);
   border-radius: 16px;
-  background: rgba(0,0,0,.35);
+  background: rgba(19 20 19);
   overflow: hidden;
 }
 
