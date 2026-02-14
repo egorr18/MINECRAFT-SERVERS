@@ -277,34 +277,6 @@
   opacity: 0.92;
 }
 
-.nav__toggle{
-  background: transparent !important;
-  border: 0;
-  color: rgba(255,255,255,.92) !important;
-  font: inherit;
-  cursor: pointer;
-
-  display: inline-flex;
-  align-items: center;
-  gap: 10px;
-
-  padding: 10px 0;
-  border-radius: 0;
-}
-/* Базовое состояние иконки в навигации */
-.nav__toggle img {
-    width: 16px;
-    height: 16px;
-    filter: invert(1); /* Если иконка темная */
-    transition: transform 0.3s ease-in-out; /* Плавность движения */
-    transform: rotate(0deg); /* Начальное положение (вниз) */
-    display: block;
-}
-
-/* Поворот при активном меню */
-.nav__toggle.active img {
-    transform: rotate(180deg); /* Переворот вверх */
-}
 /* Базовое состояние иконки в FAQ */
 .faq__icon {
     width: 16px;
@@ -341,9 +313,7 @@ details[open] .faq__a.muted {
     }
 }
 
-.nav__toggle:hover{
-  background: transparent !important;
-}
+
 
 .nav__menu .nav__item{
   display: flex !important;
@@ -461,28 +431,6 @@ details[open] .faq__a.muted {
   font-weight: 400;
 }
 
-.mnav__sectionTitle{
-  margin: 14px 10px 6px;
-  font-size: 14px;
-  letter-spacing: .14em;
-  opacity: .55;
-}
-
-.mnav__link--icon{
-  display:flex;
-  align-items:center;
-  gap: 12px;
-  font-weight: 200;
-}
-
-.mnav__icon{
-  display: block;
-  flex: 0 0 18px;
-  width: 18px;
-  height: 18px;
-  opacity: .85;
-  filter: brightness(0) invert(1);
-}
 
 .mnav__bottom{
   margin-top: auto;
@@ -558,11 +506,7 @@ details[open] .faq__a.muted {
     width: 100%;
   }
 
-  .nav__toggle{
-    width: 100%;
-    justify-content: space-between;
-    padding: 14px 0;
-  }
+
 
   .nav__menu{
     position: static;
