@@ -1,0 +1,305 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Account — Overview</title>
+
+  <link rel="icon" type="image/svg+xml" href="../assets/icons/logo.svg">
+
+    <link rel="stylesheet" href="../css/reset.css" />
+    <link rel="stylesheet" href="../css/variables.css" />
+    <link rel="stylesheet" href="../css/global.css" />
+    <link rel="stylesheet" href="../css/components.css" />
+    <link rel="stylesheet" href="../css/home.css" />
+    <link rel="stylesheet" href="../css/account.css">
+
+    <script src="../js/main.js" defer></script>
+</head>
+
+<body>
+<header class="topbar" data-topbar>
+  <div class="container topbar__inner">
+
+    <a class="brand" href="../index.html" aria-label="Home">
+      <img class="brand__logo" src="../assets/icons/logo.svg" alt="Logo" />
+    </a>
+
+    <nav class="nav" data-nav aria-label="Main navigation">
+      <a class="nav__link" href="../index.html">Home</a>
+      <a class="nav__link is-active" href="./create-server.html">Create a server</a>
+      
+    <div class="nav__right" role="group" aria-label="Account actions">
+        <a class="nav__link" href="account.html">Account</a>
+        <a class="nav__link" href="wallet.html">Wallet</a>
+        <a class="nav__link" href="servers.html">Servers</a>
+        <span class="nav__divider" aria-hidden="true"></span>
+        <a class="nav__link nav__link--danger" href="#" data-signout>Sign Out</a>
+    </div>
+    </nav>
+
+    <button class="burger" type="button" aria-label="Open menu" aria-expanded="false" data-burger>
+      <span></span><span></span><span></span>
+    </button>
+
+  </div>
+</header>
+
+<div class="mnav" data-mobile-menu aria-hidden="true">
+  <div class="mnav__panel" role="dialog" aria-modal="true" aria-label="Menu">
+    <div class="mnav__top">
+      <a class="brand" href="../index.html" aria-label="Home">
+        <img class="brand__logo" src="../assets/icons/logo.svg" alt="Logo" />
+      </a>
+      <button class="mnav__close" type="button" aria-label="Close menu" data-mobile-close>✕</button>
+    </div>
+
+    <nav class="mnav__links" aria-label="Mobile navigation">
+      <a class="mnav__link" href="../index.html">Home</a>
+      <a class="mnav__link is-active" href="create-server.html">Create a server</a>
+    </nav>
+
+    <div class="mnav__section" role="navigation" aria-label="Account actions">
+      <div class="mnav__section-title muted">ACCOUNT</div>
+
+      <a class="mnav__link" href="account.html">Account</a>
+      <a class="mnav__link" href="wallet.html">Billing &amp; Wallet</a>
+      <a class="mnav__link" href="servers.html">My Servers</a>
+    </div>
+
+    <div class="mnav__spacer" aria-hidden="true"></div>
+
+    <div class="mnav__bottom" role="navigation" aria-label="Sign out">
+      <a class="mnav__link mnav__link--danger" href="login.html" data-signout>Sign Out</a>
+    </div>
+  </div>
+</div>
+
+
+  <main class="acc">
+    <div class="container">
+
+      <header class="acc__head">
+        <h1 class="acc__title">Account Overview</h1>
+        <p class="acc__subtitle">
+          Welcome back, <span class="acc__user" data-username>laker_10248</span>
+        </p>
+      </header>
+
+      <section class="acc-top">
+        <article class="acc-card acc-card--profile">
+          <div class="acc-profile__banner"></div>
+
+          <div class="acc-profile__row">
+            <div class="acc-avatar" aria-hidden="true">
+              <span data-avatar-letter>L</span>
+            </div>
+
+            <div class="acc-profile__meta">
+              <div class="acc-profile__name">
+                <span data-username>laker_10248</span>
+                <span class="acc-badge">Member</span>
+              </div>
+            </div>
+          </div>
+
+          <a class="btn btn--primary acc-btn" href="#">
+            View Profile
+          </a>
+        </article>
+
+        <article class="acc-card">
+          <div class="acc-card__head">
+            <div class="acc-card__title">
+              <span class="acc-ic" aria-hidden="true"></span>
+              Wallet
+            </div>
+            <div class="acc-card__hint muted">TOTAL BALANCE</div>
+          </div>
+
+          <div class="acc-balance">
+            <span class="acc-balance__value" data-balance>$0.00</span>
+          </div>
+
+            <div class="acc-mini-grid" aria-hidden="true">
+            <div class="acc-mini">
+                <div class="acc-mini__top">
+                <span class="acc-mini__dot"></span>
+                <span class="acc-mini__label">Credit</span>
+                </div>
+                <div class="acc-mini__value">$0.00</div>
+            </div>
+
+            <div class="acc-mini">
+                <div class="acc-mini__top">
+                <span class="acc-mini__dot"></span>
+                <span class="acc-mini__label">Crypto</span>
+                </div>
+                <div class="acc-mini__value">$0.00</div>
+            </div>
+            </div>
+
+
+          <a class="btn btn--primary acc-btn" href="#">
+            Open Wallet
+          </a>
+        </article>
+
+        <article class="acc-card">
+          <div class="acc-card__head">
+            <div class="acc-card__title">
+              <span class="acc-ic" aria-hidden="true"></span>
+              Monthly Overview
+            </div>
+            <div class="acc-card__hint muted">Recurring expenses</div>
+          </div>
+
+          <div class="acc-stats">
+            <div class="acc-stat">
+              <span class="muted">Recurring Costs</span>
+              <strong data-recurring>$0.00</strong>
+            </div>
+
+            <div class="acc-stat">
+              <span class="muted">Active Subscriptions</span>
+              <strong data-subs>0</strong>
+            </div>
+
+            <div class="acc-stat">
+              <span class="muted">Unpaid Invoices</span>
+              <strong class="acc-green" data-unpaid>0</strong>
+            </div>
+          </div>
+
+          <a class="btn btn--ghost acc-btn" href="#">
+            View Invoices
+          </a>
+        </article>
+      </section>
+
+      <!-- MID GRID -->
+      <section class="acc-mid">
+        <article class="acc-card">
+          <div class="acc-card__head acc-card__head--row">
+            <div class="acc-card__title">
+              <span class="acc-ic" aria-hidden="true"></span>
+              Subscriptions
+            </div>
+          </div>
+
+          <div class="acc-empty">
+            <div class="acc-empty__icon" aria-hidden="true">
+            </div>
+            <div class="acc-empty__title">No Subscriptions</div>
+            <div class="acc-empty__text muted">
+              Subscribe to a plan to unlock premium features and resources<br>
+              for your servers.
+            </div>
+            <a class="btn btn--primary acc-empty__btn" href="#">
+              Browse Plans
+            </a>
+          </div>
+        </article>
+
+        <!-- Quick Actions -->
+        <aside class="acc-card acc-card--side">
+          <div class="acc-card__head acc-card__head--row">
+            <div class="acc-card__title">Quick Actions</div>
+          </div>
+
+          <div class="acc-actions">
+            <a class="acc-action" href="#">
+              <span>Account Settings</span>
+              <span aria-hidden="true">›</span>
+            </a>
+          </div>
+        </aside>
+      </section>
+
+      <!-- BOTTOM -->
+      <section class="acc-bottom">
+        <article class="acc-card">
+          <div class="acc-card__head acc-card__head--row">
+            <div class="acc-card__title">
+              <span class="acc-ic" aria-hidden="true"></span>
+              Recent Invoices
+            </div>
+            <a class="acc-link muted" href="#">View All →</a>
+          </div>
+
+          <div class="acc-empty acc-empty--small">
+            <div class="acc-empty__icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24" width="44" height="44" fill="none">
+                <path d="M7 3h10v18l-2-1-3 1-3-1-2 1V3Z" stroke="currentColor" stroke-width="2" opacity=".65"/>
+                <path d="M9 8h6M9 12h6" stroke="currentColor" stroke-width="2" stroke-linecap="round" opacity=".65"/>
+              </svg>
+            </div>
+            <div class="acc-empty__title">No Invoices Yet</div>
+            <div class="acc-empty__text muted">
+              Your invoices will appear here once you have transactions.
+            </div>
+          </div>
+        </article>
+      </section>
+
+    </div>
+  </main>
+
+<footer class="footer">
+  <div class="container footer__grid">
+    <div class="footer__brand">
+      <div class="footer__logoRow">
+      <img class="brand__logo" src="../assets/icons/logo.svg" alt="Logo" />
+        <span class="footer__brandName">MCServerHost</span>
+      </div>
+
+      <p class="footer__desc">
+        Premium Minecraft server hosting with exceptional performance, reliability, and 24/7 support.
+      </p>
+
+      <div class="footer__social">
+        <a class="footer__icon" href="#" aria-label="Twitter">
+          <img class="btn__icon" src="../assets/icons/tiktok.png" alt="tiktok" aria-hidden="true">
+        </a>
+        <a class="footer__icon" href="#" aria-label="Twitter">
+          <img class="btn__icon" src="../assets/icons/twitter.png" alt="twitter" aria-hidden="true">
+        </a>
+        <a class="footer__icon" href="#" aria-label="Discord">
+          <img class="btn__icon" src="../assets/icons/discord.png" alt="discord" aria-hidden="true">
+        </a>
+      </div>
+    </div>
+
+    <div class="footer__col">
+      <div class="footer__title">Services</div>
+      <a class="footer__link" href="#">Minecraft Hosting</a>
+      <a class="footer__link" href="#">Free Minecraft Hosting</a>
+      <a class="footer__link" href="#">Account Area</a>
+      <a class="footer__link" href="#">Server Dashboard</a>
+    </div>
+
+    <div class="footer__col">
+      <div class="footer__title">header</div>
+      <a class="footer__link" href="#">Community Forums</a>
+      <a class="footer__link" href="#">Minecraft Server List</a>
+      <a class="footer__link" href="#">Member List</a>
+    </div>
+
+    <div class="footer__col">
+      <div class="footer__title">Resources</div>
+      <a class="footer__link" href="#">Careers</a>
+      <a class="footer__link" href="#">Downloads</a>
+      <a class="footer__link" href="#">Service Status</a>
+      <a class="footer__link" href="#">Terms of Service</a>
+      <a class="footer__link" href="#">Privacy Policy</a>
+    </div>
+  </div>
+
+  <div class="container footer__bottom">
+    <div class="footer__line"></div>
+    <div class="footer__copy">© 2026 MCServerHost. All rights reserved.</div>
+  </div>
+</footer>
+
+</body>
+</html>

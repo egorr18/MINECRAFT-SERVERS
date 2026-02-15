@@ -155,11 +155,10 @@
   position: sticky;
   top: 0;
   z-index: 50;
-  background: var(--bg);                 /* ✅ суцільний темний */
+  background: var(--bg);
   border-bottom: 1px solid rgba(255,255,255,.06);
-  backdrop-filter: none;                /* ✅ без розмиття */
+  backdrop-filter: none;
 }
-
 
 .topbar__inner{
   height: 64px;
@@ -168,6 +167,8 @@
   gap: 16px;
   justify-content: space-between;
 }
+
+
 
 /* logo */
 .brand{
@@ -199,6 +200,8 @@
   flex: 1;
 }
 
+
+
 .nav__link{
   text-decoration:none;
   color: var(--text);
@@ -209,7 +212,6 @@
 }
 
 .nav__link:hover{
-  color: var(--text);
   background: rgba(255,255,255,.04);
   border-color: rgba(255,255,255,.06);
 }
@@ -405,6 +407,10 @@ details[open] .faq__a.muted {
   align-items:center;
   justify-content:space-between;
   gap: 12px;
+
+  padding-bottom: 12px;
+  margin-bottom: 12px;
+  border-bottom: 1px solid rgba(255,255,255,.35);
 }
 
 .mnav__close{
@@ -431,12 +437,23 @@ details[open] .faq__a.muted {
   font-weight: 400;
 }
 
+.mnav__link--danger{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: rgba(255, 120, 120, .95);
+}
+
+.mnav__link--danger:hover{
+  background: rgba(255, 80, 80, .10);
+}
 
 .mnav__bottom{
   margin-top: auto;
   padding-top: 14px;
   display:flex;
   flex-direction:column;
+  border-top: 1px solid rgba(255, 255, 255, 22%);
   gap: 10px;
 }
 
@@ -506,8 +523,6 @@ details[open] .faq__a.muted {
     width: 100%;
   }
 
-
-
   .nav__menu{
     position: static;
     top: auto;
@@ -540,6 +555,24 @@ details[open] .faq__a.muted {
     padding: 12px 10px;
     border-radius: 12px;
     font-weight: 200;
+  }
+
+  .mnav__section{
+    margin-top: 8px;
+    padding: 10px 0 0;
+  }
+
+  .mnav__section-title{
+    font-size: 14px;
+    letter-spacing: .12em;
+    text-transform: uppercase;
+    padding: 0 14px;
+    margin: 18px 0 18px; 
+    color: rgba(255,255,255,.55);
+  }
+
+  .mnav__spacer{ 
+    flex: 1; 
   }
 
 }
