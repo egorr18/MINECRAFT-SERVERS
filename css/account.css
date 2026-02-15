@@ -103,25 +103,45 @@
   justify-content:space-between;
   gap: 12px;
 }
-
-.acc-card__title{
-  display:flex;
-  align-items:center;
-  gap: 10px;
-  font-weight: 900;
-  color: rgba(255,255,255,.92);
+/* Контейнер для иконки и всей группы текста */
+.acc-card__title-group {
+    display: flex;
+    align-items: flex-start; /* Иконка будет на уровне первой строки текста */
+    gap: 12px;               /* Расстояние между иконкой и текстом */
 }
 
-.acc-ic{
-  width: 22px;
-  height: 22px;
-  display:grid;
-  place-items:center;
-  border-radius: 8px;
-  background: rgba(86,220,49,.10);
-  border: 1px solid rgba(86,220,49,.18);
+/* Стопка текста (Wallet + Total Balance) */
+.acc-card__text-stack {
+    display: flex;
+    flex-direction: column;  /* Ставим тексты друг под другом */
+    gap: 2px;                /* Расстояние между Wallet и Total Balance */
 }
 
+/* Стили самого заголовка */
+.acc-card__title {
+    font-size: 1.1rem;
+    font-weight: 600;
+    line-height: 1.2;
+    margin: 0;               /* Убираем лишние отступы */
+}
+
+.acc-card__hint {
+    font-size: 0.7rem;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    opacity: 0.6;
+    /* УДАЛИ margin-left: 33px; */
+    margin-left: 0 !important;
+    margin-top: 2px; /* Небольшой отступ сверху от заголовка */
+}
+
+/* Убедимся, что контейнер с текстом не центрирует содержимое */
+.acc-card__text-stack {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start; /* Это выровняет оба текста по левому краю */
+    text-align: left;
+}
 .acc-card__hint{ 
     font-size: 12px; 
     letter-spacing: .08em; 
@@ -396,4 +416,17 @@
   .nav__link--danger:hover{
     background: rgba(255, 120, 120, .12);
   }
+}
+.btn--ghost.acc-btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    color: #ffffff !important;
+    gap: 4px;
+    text-decoration: none;
+}
+
+.btn--ghost.acc-btn svg {
+    stroke: #ffffff !important;
+    margin: 0 !important;
 }
