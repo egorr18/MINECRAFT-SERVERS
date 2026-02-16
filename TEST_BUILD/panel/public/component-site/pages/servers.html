@@ -1,11 +1,154 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Servers</title>
+
+
+    <link rel="stylesheet" href="../css/reset.css" />
+    <link rel="stylesheet" href="../css/variables.css" />
+    <link rel="stylesheet" href="../css/global.css" />
+    <link rel="stylesheet" href="../css/components.css" />
+    <link rel="stylesheet" href="../css/home.css" />
+    <link rel="stylesheet" href="../css/account.css">
+    <link rel="stylesheet" href="../css/servers.css">
+ 
+
+
+    <script src="../js/main.js" defer></script>
 </head>
+
 <body>
-    
+<header class="topbar" data-topbar>
+    <div class="container topbar__inner">
+
+        <a class="brand" href="../index.html" aria-label="Home">
+            <img class="brand__logo" src="../assets/icons/logo.svg" alt="Logo" />
+        </a>
+
+        <nav class="nav" data-nav aria-label="Main navigation">
+            <a class="nav__link" href="../index.html">Home</a>
+            <a class="nav__link is-active" href="create-server.html">Create a server</a>
+
+            <div class="nav__right" role="group" aria-label="Account actions">
+                <a class="nav__link" href="account.html">Account</a>
+                <a class="nav__link" href="wallet.html">Wallet</a>
+                <a class="nav__link" href="servers.html">Servers</a>
+                <span class="nav__divider" aria-hidden="true"></span>
+                <a class="nav__link nav__link--danger" href="login.html" data-signout>Sign Out</a>
+            </div>
+        </nav>
+
+        <button class="burger" type="button" aria-label="Open menu" aria-expanded="false" data-burger>
+            <span></span><span></span><span></span>
+        </button>
+
+    </div>
+</header>
+
+<div class="mnav" data-mobile-menu aria-hidden="true">
+    <div class="mnav__panel" role="dialog" aria-modal="true" aria-label="Menu">
+        <div class="mnav__top">
+            <a class="brand" href="../index.html" aria-label="Home">
+                <img class="brand__logo" src="../assets/icons/logo.svg" alt="Logo" />
+            </a>
+            <button class="mnav__close" type="button" aria-label="Close menu" data-mobile-close>✕</button>
+        </div>
+
+        <nav class="mnav__links" aria-label="Mobile navigation">
+            <a class="mnav__link" href="../index.html">Home</a>
+            <a class="mnav__link is-active" href="create-server.html">Create a server</a>
+        </nav>
+
+        <div class="mnav__section" role="navigation" aria-label="Account actions">
+            <div class="mnav__section-title muted">ACCOUNT</div>
+
+            <a class="mnav__link" href="account.html">Account</a>
+            <a class="mnav__link" href="wallet.html">Billing &amp; Wallet</a>
+            <a class="mnav__link" href="servers.html">My Servers</a>
+        </div>
+
+        <div class="mnav__spacer" aria-hidden="true"></div>
+
+        <div class="mnav__bottom" role="navigation" aria-label="Sign out">
+            <a class="mnav__link mnav__link--danger" href="login.html" data-signout>Sign Out</a>
+        </div>
+    </div>
+</div>
+  <main class="container">
+    <div class="serversHead">
+      <div>
+        <h1 class="serversHead__title">Your Servers</h1>
+        <p class="serversHead__sub">Manage all your game servers in one place</p>
+      </div>
+
+      <a class="btnCreate" href="./create-server.html">
+        <span class="btnCreate__plus">+</span>
+        Create Server
+      </a>
+    </div>
+
+    <section id="serversList" class="serversList"></section>
+
+    <p id="emptyState" class="emptyState" hidden>
+      You don’t have servers yet. Click “Create Server”.
+    </p>
+  </main>
+<footer class="footer">
+    <div class="container footer__grid">
+        <div class="footer__brand">
+            <div class="footer__logoRow">
+                <img class="brand__logo" src="../assets/icons/logo.svg" alt="Logo" />
+                <span class="footer__brandName">MCServerHost</span>
+            </div>
+
+            <p class="footer__desc">
+                Premium Minecraft server hosting with exceptional performance, reliability, and 24/7 support.
+            </p>
+
+            <div class="footer__social">
+                <a class="footer__icon" href="#" aria-label="Twitter">
+                    <img class="btn__icon" src="../assets/icons/tiktok.png" alt="tiktok" aria-hidden="true">
+                </a>
+                <a class="footer__icon" href="#" aria-label="Twitter">
+                    <img class="btn__icon" src="../assets/icons/twitter.png" alt="twitter" aria-hidden="true">
+                </a>
+                <a class="footer__icon" href="#" aria-label="Discord">
+                    <img class="btn__icon" src="../assets/icons/discord.png" alt="discord" aria-hidden="true">
+                </a>
+            </div>
+        </div>
+
+        <div class="footer__col">
+            <div class="footer__title">Services</div>
+            <a class="footer__link" href="#">Minecraft Hosting</a>
+            <a class="footer__link" href="#">Free Minecraft Hosting</a>
+            <a class="footer__link" href="#">Account Area</a>
+            <a class="footer__link" href="#">Server Dashboard</a>
+        </div>
+
+        <div class="footer__col">
+            <div class="footer__title">header</div>
+            <a class="footer__link" href="#">Community Forums</a>
+            <a class="footer__link" href="#">Minecraft Server List</a>
+            <a class="footer__link" href="#">Member List</a>
+        </div>
+
+        <div class="footer__col">
+            <div class="footer__title">Resources</div>
+            <a class="footer__link" href="#">Careers</a>
+            <a class="footer__link" href="#">Downloads</a>
+            <a class="footer__link" href="#">Service Status</a>
+            <a class="footer__link" href="#">Terms of Service</a>
+            <a class="footer__link" href="#">Privacy Policy</a>
+        </div>
+    </div>
+
+    <div class="container footer__bottom">
+        <div class="footer__line"></div>
+        <div class="footer__copy">© 2026 MCServerHost. All rights reserved.</div>
+    </div>
+</footer>
 </body>
 </html>

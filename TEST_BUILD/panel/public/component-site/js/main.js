@@ -1,7 +1,4 @@
 (function () {
-    // ==========================================
-    // 1. ИНТЕРФЕЙС: МЕНЮ, ЧАСЫ, FAQ
-    // ==========================================
     const burger = document.querySelector("[data-burger]");
     const mobileMenu = document.querySelector("[data-mobile-menu]");
     const mobileClose = document.querySelector("[data-mobile-close]");
@@ -95,13 +92,9 @@
             }
         });
     });
-
-    // ==========================================
-    // 2. АВТОРИЗАЦИЯ И ПРОФИЛЬ
-    // ==========================================
+    
     document.addEventListener("DOMContentLoaded", () => {
 
-        // --- ОБРАБОТКА ФОРМ (РЕГИСТРАЦИЯ / ВХОД) ---
         const forms = document.querySelectorAll("form");
         forms.forEach(form => {
             form.addEventListener("submit", (e) => {
@@ -113,11 +106,7 @@
                 const confirmPassInput = form.querySelector('input[placeholder="Confirm Password"]');
                 const termsCheckbox = form.querySelector('input[type="checkbox"]');
 
-                // Проверяем, есть ли поле "Confirm Password"
                 if (confirmPassInput) {
-                    // -----------------------------
-                    // --- ЭТО РЕГИСТРАЦИЯ (SIGN UP)
-                    // -----------------------------
                     if (termsCheckbox && !termsCheckbox.checked) {
                         return alert("Ошибка: Нужно согласиться с правилами!");
                     }
@@ -125,17 +114,12 @@
                         return alert("Ошибка: Пароли не совпадают!");
                     }
 
-                    // Берем имя из поля (или ставим стандартное)
                     const name = usernameInput && usernameInput.value ? usernameInput.value : "New User";
                     localStorage.setItem("currentUser", name);
 
                     window.location.href = "account.html";
 
                 } else {
-                    // -----------------------------
-                    // --- ЭТО ВХОД (LOGIN)
-                    // -----------------------------
-                    // Проверяем, заполнил ли человек поля
                     if (!emailInput || !emailInput.value) {
                         return alert("Пожалуйста, введите ваш Email!");
                     }
@@ -143,8 +127,6 @@
                         return alert("Пожалуйста, введите пароль!");
                     }
 
-                    // Красивая фишка: берем логин из email (всё, что до собачки @)
-                    // Например, если ввели "hacker2026@gmail.com", в аккаунте будет имя "hacker2026"
                     const name = emailInput.value.split('@')[0];
 
                     localStorage.setItem("currentUser", name);
@@ -153,19 +135,15 @@
             });
         });
 
-        // --- ОБНОВЛЕНИЕ ИМЕНИ В АККАУНТЕ ---
         const nameElements = document.querySelectorAll("[data-username]");
 
         if (nameElements.length > 0) {
-            // Достаем сохраненное имя (или laker_10248)
             const savedName = localStorage.getItem("currentUser") || "laker_10248";
 
-            // Вставляем имя во все места
             nameElements.forEach(el => {
                 el.textContent = savedName;
             });
 
-            // Вставляем первую букву в аватарку
             const avatarLetter = document.querySelector("[data-avatar-letter]");
             if (avatarLetter && savedName.length > 0) {
                 avatarLetter.textContent = savedName.charAt(0).toUpperCase();

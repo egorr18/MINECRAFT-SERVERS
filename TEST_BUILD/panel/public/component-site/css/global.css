@@ -1,14 +1,27 @@
 html, body{
   overflow-x: hidden;
+  height: 100%;
 }
 
 body{
+  min-height: 100vh;
+  display:flex;
+  flex-direction:column;
+  align-items: stretch;
   background: radial-gradient(1200px 700px at 30% -10%, rgba(25,211,107,.10), transparent 50%),
               radial-gradient(900px 600px at 80% 10%, rgba(25,211,107,.06), transparent 55%),
               var(--bg);
   color: var(--text);
   font-family: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Arial, "Inter", sans-serif;
   line-height: 1.5;
+}
+
+header, main, footer{
+  width: 100%;
+}
+
+main{
+  flex: 1;
 }
 
 a,
