@@ -67,8 +67,20 @@
   display: grid;
   gap: 18px;
 }
+.ps-back{
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  text-decoration: none;
+}
 
-/* buttons */
+.ps-back__icon{
+  width: 24px;
+  height: 24px;
+  display: block;
+  object-fit: contain;
+}
+
 .ps-btn{
   display:inline-flex;
   align-items:center;
