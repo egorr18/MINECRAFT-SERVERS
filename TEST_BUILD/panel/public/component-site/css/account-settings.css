@@ -79,6 +79,7 @@
   height: 24px;
   display: block;
   object-fit: contain;
+  filter: brightness(0) saturate(100%) invert(62%) sepia(90%) saturate(500%) hue-rotate(3deg) brightness(95%) contrast(95%);
 }
 
 .ps-btn{
