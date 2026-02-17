@@ -21,7 +21,6 @@
         dotsWrap.innerHTML = "";
         reviews.forEach((_, idx) => {
             const d = document.createElement("span");
-            // Если индекс совпадает с текущим слайдом, добавляем класс is-active
             d.className = "dot" + (idx === i ? " is-active" : "");
             d.addEventListener("click", () => { i = idx; render(); });
             dotsWrap.appendChild(d);
@@ -29,11 +28,9 @@
     }
 
     function render() {
-        // Обновляем текст
         text.textContent = reviews[i].text;
         name.textContent = reviews[i].name;
         country.textContent = reviews[i].country;
-        // Перерисовываем точки
         renderDots();
     }
 
@@ -47,6 +44,5 @@
         render();
     });
 
-    // Инициализация
     render();
 })();

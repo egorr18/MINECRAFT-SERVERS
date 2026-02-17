@@ -34,7 +34,6 @@ document.addEventListener("DOMContentLoaded", () => {
         if (key === "yearly") return monthly * 12 * (1 - yearlyDiscount);
         if (key === "weekly") return (monthly / WEEKS_PER_MONTH) * (1 + weeklySurcharge);
       } else {
-        // basePeriod === "weekly"
         const weekly = base;
         const monthlyFull = weekly * WEEKS_PER_MONTH;
         if (key === "weekly") return weekly;

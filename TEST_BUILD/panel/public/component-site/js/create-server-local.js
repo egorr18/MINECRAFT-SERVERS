@@ -34,10 +34,10 @@ function getBillingCycle() {
 function addServerLocal({ planName, planType }) {
   const server = {
     id: uid(),
-    name: `${planName} Server`,         // поки так, потім заміниш на input
-    plan: planType,                      // "free" або "paid"
-    planName,                            // Bat / Zombie / ...
-    billing: getBillingCycle(),          // weekly/monthly/quarterly/yearly
+    name: `${planName} Server`,
+    plan: planType,
+    planName,
+    billing: getBillingCycle(),
     domain: makeDomain(planName),
     status: "stopped",
     created_at: Date.now(),
@@ -47,12 +47,10 @@ function addServerLocal({ planName, planType }) {
   arr.unshift(server);
   saveServers(arr);
 
-  // поки dashboard нема — ведемо в список серверів
   location.href = "./servers.html";
 }
 
 document.addEventListener("DOMContentLoaded", () => {
-  // ловимо клік по всіх кнопках планів
   document.addEventListener("click", (e) => {
     const btn = e.target.closest(".cs-btn");
     if (!btn) return;
