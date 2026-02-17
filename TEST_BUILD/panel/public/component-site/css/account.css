@@ -7,9 +7,6 @@
   background: rgba(255, 80, 80, .10);
 }
 
-
-
-/* Account Overview page */
 .acc{ padding: 42px 0 80px; }
 
 .acc__title{
@@ -25,7 +22,6 @@
 
 .acc__user{ color: rgba(86,220,49,.95); }
 
-/* grid blocks */
 .acc-top{
   margin-top: 22px;
   display: grid;
@@ -66,20 +62,16 @@
   margin: -16px -16px 0;
 }
 
-/* Profile button only */
 .acc-btn--profile{
   height: 40px;
   border-radius: 10px;
   font-weight: 800;
   font-size: 14px;
   gap: 8px;
-
-  /* зелений як у тебе */
   background: linear-gradient(180deg, rgba(86,220,49,.95), rgba(86,220,49,.75));
   color: #07130a;
 }
 
-/* іконка в кнопці */
 .acc-btn__ic{
   width: 18px;
   height: 18px;
@@ -103,26 +95,23 @@
   justify-content:space-between;
   gap: 12px;
 }
-/* Контейнер для иконки и всей группы текста */
 .acc-card__title-group {
     display: flex;
-    align-items: flex-start; /* Иконка будет на уровне первой строки текста */
-    gap: 12px;               /* Расстояние между иконкой и текстом */
+    align-items: flex-start;
 }
 
-/* Стопка текста (Wallet + Total Balance) */
+
 .acc-card__text-stack {
     display: flex;
-    flex-direction: column;  /* Ставим тексты друг под другом */
-    gap: 2px;                /* Расстояние между Wallet и Total Balance */
+    flex-direction: column;
+    gap: 2px;
 }
 
-/* Стили самого заголовка */
 .acc-card__title {
     font-size: 1.1rem;
     font-weight: 600;
     line-height: 1.2;
-    margin: 0;               /* Убираем лишние отступы */
+    margin: 0;
 }
 
 .acc-card__hint {
@@ -130,16 +119,14 @@
     text-transform: uppercase;
     letter-spacing: 0.05em;
     opacity: 0.6;
-    /* УДАЛИ margin-left: 33px; */
     margin-left: 0 !important;
-    margin-top: 2px; /* Небольшой отступ сверху от заголовка */
+    margin-top: 2px;
 }
 
-/* Убедимся, что контейнер с текстом не центрирует содержимое */
 .acc-card__text-stack {
     display: flex;
     flex-direction: column;
-    align-items: flex-start; /* Это выровняет оба текста по левому краю */
+    align-items: flex-start;
     text-align: left;
 }
 .acc-card__hint{ 
@@ -148,7 +135,6 @@
     margin-left: 33px;
 }
 
-/* profile */
 .acc-profile__banner{
   height: 84px;
   background: radial-gradient(120% 120% at 0% 0%, rgba(86,220,49,.35), rgba(86,220,49,0) 60%), linear-gradient(90deg, rgba(86,220,49,.22), rgba(86,220,49,0)), linear-gradient(180deg, rgba(255,255,255,.06), rgba(0,0,0,0));
@@ -206,7 +192,6 @@
   border-radius: 12px;
 }
 
-/* wallet */
 .acc-balance{
   margin-top: 8px;
   font-size: 34px;
@@ -265,7 +250,6 @@
 }
 
 
-/* monthly stats */
 .acc-stats{
   margin-top: 12px;
   display:grid;
@@ -289,7 +273,6 @@
   color: rgba(255,255,255,.92);
 }
 
-/* empty states */
 .acc-empty{
   margin-top: 14px;
   padding: 28px 18px;
@@ -324,7 +307,6 @@
 }
 
 
-/* quick actions */
 .acc-actions{ 
   margin-top: 8px; 
   display:grid; 
@@ -348,13 +330,11 @@
   background: rgba(86,220,49,.10);
 }
 
-/* link */
 .acc-link{
   text-decoration:none;
 }
 .acc-link:hover{ color: rgba(255,255,255,.92); }
 
-/* responsive */
 @media (max-width: 1100px){
   .acc-top{ grid-template-columns: 1fr; }
   .acc-mid{ grid-template-columns: 1fr; }

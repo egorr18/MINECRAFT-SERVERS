@@ -1,5 +1,3 @@
-/* Profile Settings page */
-
 .ps{ padding: 42px 0 80px; }
 
 .ps-back{
@@ -20,7 +18,6 @@
 }
 .ps__subtitle{ margin-top: 8px; }
 
-/* layout */
 .ps-grid{
   margin-top: 18px;
   display: grid;
@@ -30,7 +27,6 @@
 }
 .ps-side{ display: grid; gap: 18px; }
 
-/* card */
 .ps-card{
   border-radius: 18px;
   border: 1px solid rgba(255,255,255,.08);
@@ -113,7 +109,6 @@
   border-color: rgba(220, 38, 38, .65);
 }
 
-/* personal info grid */
 .ps-info{
   display: grid;
   grid-template-columns: 1fr 1fr;
@@ -133,7 +128,6 @@
 }
 .ps-v--mono{ font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", monospace; }
 
-/* security form */
 .ps-form{ display: grid; gap: 14px; }
 .ps-input{ display:grid; gap: 8px; }
 
@@ -155,7 +149,6 @@
 
 .ps-submit{ margin-top: 6px; }
 
-/* right cards */
 .ps-kv{ display: grid; gap: 12px; }
 .ps-k{ font-size: 12px; color: rgba(255,255,255,.55); margin-bottom: 4px; }
 .ps-v{ font-weight: 500; color: rgba(255,255,255,.92); }
@@ -187,7 +180,6 @@
   border-color: rgba(220,38,38,.30);
 }
 
-/* danger card */
 .ps-card--danger{
   border-color: rgba(220,38,38,.30);
   background: rgba(220,38,38,.06);
@@ -204,8 +196,12 @@
   margin-bottom: 12px;
 }
 
-/* responsive */
 @media (max-width: 1100px){
-  .ps-grid{ grid-template-columns: 1fr; }
-  .ps-info{ grid-template-columns: 1fr; }
+  .ps-grid{
+    grid-template-columns: 1fr; 
+  }
+  
+  .ps-info{ 
+    grid-template-columns: 1fr; 
+  }
 }

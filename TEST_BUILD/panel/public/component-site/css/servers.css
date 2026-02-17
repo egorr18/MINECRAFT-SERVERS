@@ -64,7 +64,7 @@
   position:absolute;
   left:0; top:0; bottom:0;
   width: 5px;
-  background: #ff3b3b; /* червона смужка як на фото */
+  background: #ff3b3b;
   opacity: .9;
 }
 
@@ -83,7 +83,9 @@
   border: 1px solid rgba(255,255,255,.08);
 }
 
-.srv__meta{ min-width: 0; }
+.srv__meta{
+   min-width: 0; 
+  }
 
 .srv__top{
   display:flex;

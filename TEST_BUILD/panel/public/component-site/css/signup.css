@@ -10,7 +10,6 @@
     --radius: 12px;
 }
 
-/* Сброс и базовые настройки */
 * {
     box-sizing: border-box;
     margin: 0;
@@ -29,7 +28,6 @@ body {
     padding: 20px;
 }
 
-/* --- Лого и Текст --- */
 .logo {
     max-width: 60px;
     margin-bottom: 20px;
@@ -50,7 +48,6 @@ body {
     text-align: center;
 }
 
-/* Ссылка (зеленая) */
 .link-accent {
     color: var(--accent2);
     text-decoration: none;
@@ -62,7 +59,6 @@ body {
     opacity: 0.8;
 }
 
-/* --- Карточка --- */
 .signup-card {
     background-color: var(--bg2);
     border: 1px solid var(--stroke);
@@ -73,19 +69,16 @@ body {
     box-shadow: 0 4px 24px rgba(0, 0, 0, 0.4);
 }
 
-/* --- Сетка формы --- */
 .signup-form {
     display: grid;
-    grid-template-columns: 1fr 1fr; /* Две колонки */
+    grid-template-columns: 1fr 1fr;
     gap: 15px;
 }
 
-/* Утилитарный класс для растягивания на всю ширину */
 .full-width {
     grid-column: span 2;
 }
 
-/* --- Поля ввода --- */
 .input-field {
     width: 100%;
     background-color: var(--card);
@@ -104,10 +97,9 @@ body {
 }
 
 .input-field:focus {
-    border-color: var(--accent); /* Золотая обводка */
+    border-color: var(--accent);
 }
 
-/* --- Чекбокс --- */
 .terms-wrapper {
     display: flex;
     align-items: center;
@@ -117,7 +109,7 @@ body {
 }
 
 .custom-checkbox {
-    appearance: none; /* Убираем стандартный вид */
+    appearance: none;
     -webkit-appearance: none;
     width: 18px;
     height: 18px;
@@ -138,7 +130,6 @@ body {
     border-color: var(--accent2);
 }
 
-/* Галочка внутри */
 .custom-checkbox:checked::after {
     content: '';
     width: 5px;
