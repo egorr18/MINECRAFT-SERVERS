@@ -150,4 +150,122 @@
             }
         }
     });
+    document.addEventListener('DOMContentLoaded', () => {
+
+        // --- 1. ГЕНЕРАЦИЯ ИМЕНИ СЕРВЕРА ---
+        const refreshBtn = document.querySelector('.btn-refresh-alt');
+        const nameInput = document.querySelector('input[placeholder="ThunderEvolution"]');
+        const subInput = document.querySelector('input[placeholder="thunderevolution281"]');
+        const nameCounter = document.querySelectorAll('.counter-text')[0];
+
+        // Списки слов для крутых названий
+        const prefixes = ['Thunder', 'Arctic', 'Raging', 'Stealth', 'Mystic', 'Shadow', 'Crystal', 'Quantum', 'Neon'];
+        const suffixes = ['Evolution', 'Warfare', 'Realms', 'Knights', 'Craft', 'Network', 'Core', 'Nexus', 'Peak'];
+
+        if (refreshBtn && nameInput) {
+            refreshBtn.addEventListener('click', (e) => {
+                e.preventDefault();
+
+                // Анимация вращения иконки
+                const svgIcon = refreshBtn.querySelector('svg');
+                svgIcon.style.transition = 'transform 0.4s ease';
+                svgIcon.style.transform = `rotate(${Math.random() * 360 + 360}deg)`;
+
+                // Генерируем имя
+                const randomPre = prefixes[Math.floor(Math.random() * prefixes.length)];
+                const randomSuf = suffixes[Math.floor(Math.random() * suffixes.length)];
+                const newName = randomPre + randomSuf;
+
+                // Вставляем имя в поле и обновляем счетчик
+                nameInput.value = newName;
+                updateCounter(nameInput, nameCounter, 50);
+
+                // Бонус: Автоматически заполняем субдомен строчными буквами
+                if (subInput) {
+                    subInput.value = newName.toLowerCase();
+                }
+            });
+        }
+
+        // --- 2. ВЫБОР ЛОКАЦИИ ---
+        const locItems = document.querySelectorAll('.loc-item');
+        locItems.forEach(item => {
+            item.addEventListener('click', () => {
+                // Убираем класс active у всех
+                locItems.forEach(loc => loc.classList.remove('active'));
+                // Добавляем кликнутому
+                item.classList.add('active');
+
+                // Небольшая анимация "нажатия"
+                item.style.transform = 'scale(0.96)';
+                setTimeout(() => item.style.transform = 'scale(1)', 150);
+            });
+        });
+
+        // --- 3. ПОДСЧЕТ СИМВОЛОВ ---
+        const descInput = document.querySelector('.area');
+        const descCounter = document.querySelectorAll('.counter-text')[1];
+
+        function updateCounter(input, counterElem, maxLength) {
+            const len = input.value.length;
+            counterElem.textContent = `${len}/${maxLength} characters`;
+
+            // Меняем цвет, если достигнут лимит
+            if (len >= maxLength) {
+                counterElem.style.color = 'var(--accent)';
+            } else {
+                counterElem.style.color = 'rgba(255, 241, 242, 0.3)';
+            }
+        }
+
+        // Слушаем ввод текста в поле имени
+        if (nameInput) {
+            nameInput.addEventListener('input', () => updateCounter(nameInput, nameCounter, 50));
+        }
+        // Слушаем ввод текста в описание
+        if (descInput) {
+            descInput.addEventListener('input', () => updateCounter(descInput, descCounter, 200));
+        }
+
+        // --- 4. ФОРМАТИРОВАНИЕ СУБДОМЕНА ---
+        if (subInput) {
+            subInput.addEventListener('input', (e) => {
+                let val = e.target.value;
+                // Разрешаем только английские буквы и цифры, сразу переводим в нижний регистр
+                val = val.toLowerCase().replace(/[^a-z0-9]/g, '');
+                e.target.value = val;
+            });
+        }
+
+        // --- 5. АНИМАЦИЯ КНОПКИ ЗАПУСКА ---
+        const launchBtn = document.querySelector('.launch-btn');
+        if (launchBtn) {
+            launchBtn.addEventListener('click', (e) => {
+                e.preventDefault();
+                const originalText = launchBtn.textContent;
+
+                // Состояние загрузки
+                launchBtn.textContent = 'CREATING...';
+                launchBtn.style.opacity = '0.8';
+                launchBtn.style.pointerEvents = 'none'; // Блокируем двойной клик
+
+                // Эмуляция ответа от сервера (через 1.5 секунды)
+                setTimeout(() => {
+                    launchBtn.textContent = 'SUCCESS! ✓';
+                    launchBtn.style.background = '#39a11c'; // Зеленый цвет успеха
+                    launchBtn.style.color = '#fff';
+                    launchBtn.style.opacity = '1';
+
+                    // Возвращаем как было через 2 секунды
+                    setTimeout(() => {
+                        launchBtn.textContent = originalText;
+                        launchBtn.style.background = 'var(--accent)';
+                        launchBtn.style.color = 'var(--bg)';
+                        launchBtn.style.pointerEvents = 'auto';
+                    }, 2000);
+                }, 1500);
+            });
+        }
+
+    });
 })();
